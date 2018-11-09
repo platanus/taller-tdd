@@ -2,10 +2,10 @@ class CalculateChange < PowerTypes::Command.new(:amount)
   def perform
     coins = []
 
-    coins << 5 if @amount % 5 == 0
-    coins << 10 if @amount % 10 == 0
-    coins << [1] * @amount if @amount < 5
+    coins << 10 if ((@amount - coins.sum) % 10).zero?
+    coins << 5 if (@amount - coins.sum).positive? && ((@amount - coins.sum) % 5).zero?
+    coins << [1] * (@amount - coins.sum) if (@amount - coins.sum).positive? && (@amount - coins.sum) < 5
 
-    return coins.flatten
+    coins.flatten
   end
 end
