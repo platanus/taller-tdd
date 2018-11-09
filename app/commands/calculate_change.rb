@@ -1,5 +1,9 @@
-class CalculateChange < PowerTypes::Command.new()
+class CalculateChange < PowerTypes::Command.new(:amount)
   def perform
-    [1]
+    if @amount == 1
+      [1]
+    elsif @amount == 2
+      [1, 1]
+    end
   end
 end
