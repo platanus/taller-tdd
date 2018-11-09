@@ -30,9 +30,15 @@ describe CalculateChange do
       end
     end
 
+    context "when change is $7" do
+      it "returns two coins of $1 and one coin of $5" do
+        expect(perform(7)).to eq([1, 1, 5])
+      end
+    end
+
     context "when change is $10" do
-      it "returns one coin of $5" do
-        expect(perform(10)).to eq([5,5])
+      it "returns one coin of $10" do
+        expect(perform(10)).to eq([10])
       end
     end
   end
