@@ -1,6 +1,14 @@
 # Taller Tdd 
 This is a Rails application, initially generated using [Potassium](https://github.com/platanus/potassium) by Platanus.
 
+Diagrama TDD
+
+[Diagrama](https://joshldavis.com/img/tdd-vs-bdd/tdd-flowchart.png)
+
+Problema
+
+Hacer un programa que entregue la mínima cantidad de monedas en un "vuelto". Las monedas son de $1, $5, $10, $50, $100 y $500
+
 ## Local installation
 
 Assuming you've just cloned the repo, run this script to setup the project in your
