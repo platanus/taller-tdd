@@ -17,5 +17,11 @@ describe CalculateChange do
         expect(perform(2)).to eq([1, 1])
       end
     end
+
+    context "when change is $3" do
+      it "returns three coins of $1" do
+        expect(perform(3)).to eq([1, 1, 1])
+      end
+    end
   end
 end
